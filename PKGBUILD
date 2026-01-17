@@ -8,6 +8,8 @@ url="https://github.com/svturnring/wpoverlay"
 license=('MIT')
 depends=('python' 'python-gobject' 'gtk4' 'gtk4-layer-shell')
 
+source=("$pkgname-$pkgver.tar.gz::https://github.com/svturnring/wpoverlay/archive/refs/tags/v$pkgver.tar.gz")
+
 package() {
     cd "${startdir}"
 
@@ -20,3 +22,4 @@ package() {
     # Install documentation
     install -Dm644 "README.md" "${pkgdir}/usr/share/doc/wpoverlay/README.md"
 }
+sha256sums=('974f08bd2a15e241a18473de44520f746dab555cf970a269d87de234f20c2d61')
